@@ -185,10 +185,26 @@ const jurusan = ref("");
 const tahunbayar = ref("");
 const tglBayar = ref("");
 
-tglBayar.value=new Date().toLocaleString();
+
+var today = new Date();
+// var dd = today.getDate();
+// var mm = today.getMonth() + 1;
+
+var yyyy = today.getFullYear();
+  // if (dd < 10) {
+  //   dd = '0' + dd;
+  // }
+  // if (mm < 10) {
+  //   mm = '0' + mm;
+  // }
+  // var today = dd + '/' + mm + '/' + yyyy;
+
+tglBayar.value=today.toLocaleString();
 let tgl=tglBayar.value;console.log(tgl);
 
-tahunbayar.value=tgl.substring(5,9);console.log(tahunbayar.value);
+tahunbayar.value=yyyy;
+
+// tahunbayar.value=tgl.substring(5,9);console.log(tahunbayar.value);
 
 
 //kode otomatis untuk kode bayar
